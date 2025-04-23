@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles/modal.css">
+    <!-- Add your other stylesheets here -->
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Logo">
+            <span>ULTIMATE TIC-TAC-TOE</span>
+        </div>
+        <div class="nav-links">
+            <a href="#learn">Learn</a>
+            <a href="#play">Play</a>
+            <a href="#explore">Explore</a>
+            <button class="play-now-btn">Play Now</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>WELCOME TO ULTIMATE TIC-TAC-TOE</h1>
+            <div class="title">
+                <h2>Strategic</h2>
+                <h2 class="gradient-text">Tic-Tac-Toe.</h2>
+            </div>
+            <p>A next-level experience of the classic game with advanced strategy, multiple boards, and competitive gameplay.</p>
+            <div class="cta-buttons">
+                <button class="play-now-btn">Play Now →</button>
+                <button class="learn-rules-btn">Learn Rules</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Rules Modal -->
+    <div class="rules-modal" id="rulesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Ultimate Tic-Tac-Toe Rules</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rule-section">
+                    <h3>Basic Concept</h3>
+                    <p>Ultimate Tic-Tac-Toe is played on a 3×3 grid of 3×3 Tic-Tac-Toe boards. Win three games in a row to win the ultimate game!</p>
+                </div>
+                
+                <div class="rule-section">
+                    <h3>How to Play</h3>
+                    <ol>
+                        <li>Your move in one square determines which board your opponent plays next</li>
+                        <li>Win a small board by getting three in a row</li>
+                        <li>Win the game by winning three small boards in a row</li>
+                    </ol>
+                </div>
+                
+                <div class="rule-section">
+                    <h3>Special Rules</h3>
+                    <ul>
+                        <li>If you're sent to a board that's already won, you can play in any open board</li>
+                        <li>You can't play in a board that's already won</li>
+                        <li>If there's a tie in a small board, no one gets that square</li>
+                    </ul>
+                </div>
+                
+                <div class="rule-section">
+                    <h3>Strategy Tips</h3>
+                    <ul>
+                        <li>Think ahead - your move determines where your opponent plays</li>
+                        <li>Control the center board when possible</li>
+                        <li>Watch for opportunities to create multiple winning paths</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/modal.js"></script>
+    <!-- Add your other scripts here -->
+</body>
+</html> 

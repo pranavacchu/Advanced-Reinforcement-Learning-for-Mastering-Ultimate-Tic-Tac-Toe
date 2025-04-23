@@ -1,0 +1,180 @@
+/* Modal Styles */
+.rules-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 12, 34, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.rules-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, rgba(28, 27, 60, 0.95), rgba(18, 17, 40, 0.95));
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.rules-modal.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(79, 190, 255, 0.1);
+}
+
+.modal-header h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    background: linear-gradient(90deg, #4FBEFF, #9B7BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: #4FBEFF;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: rgba(79, 190, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    color: #fff;
+}
+
+.rule-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(79, 190, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(79, 190, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.rule-section:hover {
+    background: rgba(79, 190, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(79, 190, 255, 0.1);
+}
+
+.rule-section h3 {
+    color: #4FBEFF;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.rule-section p, .rule-section li {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.rule-section ul, .rule-section ol {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Custom scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(79, 190, 255, 0.05);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(79, 190, 255, 0.2);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(79, 190, 255, 0.3);
+}
+
+/* Learn Rules Button Styling */
+.learn-rules-btn {
+    background: linear-gradient(45deg, #4FBEFF, #9B7BFF);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.learn-rules-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 190, 255, 0.3);
+}
+
+.learn-rules-btn:active {
+    transform: translateY(0);
+}
+
+.learn-rules-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.learn-rules-btn:hover::before {
+    left: 100%;
+} 

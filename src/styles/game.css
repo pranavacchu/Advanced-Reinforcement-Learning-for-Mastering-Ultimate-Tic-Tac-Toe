@@ -1,0 +1,296 @@
+/* Game Title Styles */
+.game-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #60a5fa, #ffffff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'game', sans-serif;
+    letter-spacing: -0.05em;
+    animation: gradient-shift 3s ease infinite;
+    margin-top:-120px;
+}
+
+.turn-indicator {
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.turn-x {
+    color: #60a5fa;
+}
+
+.turn-o {
+    color: #a855f7;
+}
+
+/* Button Styles */
+.back-button {
+    transform: scale(1.5);
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.back-button:hover {
+    transform: scale(1.55) translateX(-2px);
+}
+
+.back-button svg {
+    width: 4.75rem;
+    height: 4.75rem;
+    color: rgba(148, 148, 148, 0.9);
+}
+
+.reset-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #070606;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.reset-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(168, 85, 247, 0.4), rgba(96, 165, 250, 0.4));
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+    border-color: rgba(168, 85, 247, 0.6);
+    box-shadow: 0 6px 15px rgba(168, 85, 247, 0.2);
+    transform: translateY(-2px);
+    color: #161515;
+}
+
+.reset-button:hover::before {
+    opacity: 1;
+}
+
+.reset-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button span,
+.reset-button svg {
+    position: relative;
+    z-index: 1;
+}
+
+.reset-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0.9;
+}
+
+.reset-button:hover svg {
+    opacity: 1;
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+/* Layout Styles */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Difficulty Selector Styles */
+.difficulty-selector {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.25rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    top: 120px;
+    right:-60px;
+}
+
+.difficulty-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.difficulty-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(96, 165, 250, 0.1), rgba(168, 85, 247, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.difficulty-button:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.difficulty-button:hover::before {
+    opacity: 1;
+}
+
+.difficulty-button.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.difficulty-button.active::before {
+    opacity: 1;
+    background: linear-gradient(45deg, rgba(96, 165, 250, 0.2), rgba(168, 85, 247, 0.2));
+}
+
+.difficulty-button svg {
+    transition: transform 0.3s ease;
+}
+
+.difficulty-button:hover svg {
+    transform: scale(1.1);
+}
+
+.difficulty-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.difficulty-button svg {
+    position: relative;
+    z-index: 1;
+}
+
+.win-action-button {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: rgba(18, 17, 17, 0.9);
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(8px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-size: 200% auto;
+    background-image: linear-gradient(45deg, 
+        rgba(96, 165, 250, 0.1) 0%, 
+        rgba(168, 85, 247, 0.1) 50%, 
+        rgba(96, 165, 250, 0.1) 100%
+    );
+    animation: gradient-pulse 3s ease infinite;
+}
+
+.win-action-button:hover {
+    background-position: right center;
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.win-action-button:active {
+    transform: translateY(0) scale(0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.win-message-container {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.win-message-text {
+    background: linear-gradient(to right, #60a5fa, #ffffff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-pulse 3s ease infinite;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0.8) translateY(20px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05) translateY(-5px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes trophy-spin {
+    0% {
+        transform: rotate(-10deg) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(5deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gradient-pulse {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.win-message {
+    animation: scale-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.win-message-trophy {
+    animation: trophy-spin 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+} 
