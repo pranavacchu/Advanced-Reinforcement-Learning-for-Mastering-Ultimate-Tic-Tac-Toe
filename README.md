@@ -9,8 +9,10 @@
 ![AlphaZero](https://img.shields.io/badge/AI-AlphaZero-76B900)
 
 A modern implementation of Ultimate Tic Tac Toe with advanced AI opponents powered by neural networks, reinforcement learning, and AlphaZero algorithms.
+![image](https://github.com/user-attachments/assets/22da9b36-753a-4384-8d47-b099c4b028fb)
+![image](https://github.com/user-attachments/assets/916e6715-d614-4970-8674-b24daccb804b)
 
-![Game Demo](https://via.placeholder.com/800x400?text=Ultimate+Tic+Tac+Toe+Screenshot) <!-- Replace with an actual screenshot of your game -->
+ <!-- Replace with an actual screenshot of your game -->
 
 ## Table of Contents
 
