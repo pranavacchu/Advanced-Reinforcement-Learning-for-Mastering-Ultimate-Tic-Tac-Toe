@@ -221,9 +221,6 @@ python alpha_zero.py --train
 - **Tournament Mode**: Compete in a series of games with scoring
 - **Mobile App**: Native mobile applications using React Native
 
-## License
-
-[MIT License](LICENSE) - Feel free to use, modify, and distribute this code for your own projects.
 
 ## Acknowledgements
 
@@ -233,4 +230,3 @@ python alpha_zero.py --train
 
 ---
 
-Created by [Your Name/Username] - [Your Website/GitHub](https://github.com/yourusername)
